@@ -1,23 +1,22 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
   },
 
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
   devServer: {
     contentBase: path.resolve(__dirname, 'build'),
-    port: 1234
+    port: 1234,
   },
 
-  module : {
+  module: {
     rules: [
       {
         test: /\.js$/,
@@ -25,9 +24,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.s?css$/,
@@ -43,7 +42,7 @@ module.exports = {
         use: [
           'file-loader',
         ],
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
