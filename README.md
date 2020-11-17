@@ -66,9 +66,15 @@ For deployment, I used GitHub pages, but as you see my project is full of files 
 
 Now you that have finished, check the link to GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
 
+# Future Work
 
+- Add Night Mode to the game,
+- Increase difficulty by time or score,
+- Improve the mobile version,
+- Add more type of birds to play with,
+- Add Music that plays on the background;
 
-## Authors
+# Authors
 
 👤 **Zakariae El Mejdki**
 
