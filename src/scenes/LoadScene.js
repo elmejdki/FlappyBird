@@ -120,6 +120,6 @@ export default class LoadScene extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('MainScene');
+    this.scene.start('MenuScene');
   }
 }
