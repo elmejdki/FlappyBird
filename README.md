@@ -1,6 +1,6 @@
 # JavaScript Capstone Project: FlappyBird
 
-> This project meant to be a platform game, based on the requirements giving to me, and it supposed to be delivered on 5 days as max, there are a lot of platform games out there starting from the famous game of the nighties Super Mario, I decided to build the FlappyBird game because to be honest I was always fascinated by it and in the same time I was frustrated how it was hard so the first thought that come to my mind when I heard building a game I thought of build a new and easier version of the FlappyBird.
+> This project meant to be a platform game, based on the requirements giving to me, and it supposed to be delivered in 5 days as a max, there are a lot of platform games out there starting from the famous game of the nighties Super Mario, I decided to build the FlappyBird game because, to be honest, I was always fascinated by it and in the same time, I was frustrated how it was hard so the first thought that comes to my mind when I heard building a game I thought of building a new and easier version of the FlappyBird.
 
 ![game](./game_play.gif)
 
@@ -34,21 +34,21 @@ In order to have this project up and running you will need:
 
 ### Setup
 
-First you need to clone this project using one of the links above, using this command:
+First, you need to clone this project using one of the links above, using this command:
 
 `git clone RESPOSITRY_LINK`
 
 Then you should run: `npm install`
 
-And afterwards you supposed to run: `npm run server`, to run the project in your local machine.
+And afterward you supposed to run: `npm run server`, to run the project in your local machine.
 
 Congrats the project is fully working.
 
 ### Deployment
 
-For deployment I used GitHub pages, but as you see my project is full of files and the `index.html` file is inside the `build/` folder, so in order to deploy using GitHub pages we need to put the `index.html` file in the root of the repository, in order to do this we will use a simple trick, please follow the commands bellow if you want to deploy on your on repository:
+For deployment, I used GitHub pages, but as you see my project is full of files and the `index.html` file is inside the `build/` folder, so in order to deploy using GitHub pages we need to put the `index.html` file in the root of the repository, in order to do this we will use a simple trick, please follow the commands below if you want to deploy on your own repository:
 
-- If you have the `build/ `  folder declared inside the `.gitignore`  file please remove it form there.
+- If you have the `build/`  folder declared inside the `.gitignore`  file please remove it from there.
 
 - run `npm run build`  to generate the build folder.
 
@@ -64,7 +64,7 @@ For deployment I used GitHub pages, but as you see my project is full of files a
   git subtree push --prefix build origin gh-pages
   ```
 
-Now you have finish check the link of GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
+Now you that have finished, check the link to GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
 
 
 
