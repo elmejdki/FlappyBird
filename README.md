@@ -20,6 +20,9 @@ You can find the requirements of this capstone on this [link](https://www.notion
 
 [Live Demo](https://elmejdki.github.io/FlappyBird/)
 
+## How to Play
+
+The game will start at the first page where it asks for your user name you should enter it in order to start the game after you click on the play button you will have a bird on the screen your mission is to fly as far as possible while avoiding the obstacles (Tubes), you can jump with taping on the SPACE button or clicking on the screen.
 
 ## Getting Started
 
