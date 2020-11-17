@@ -9,11 +9,11 @@ export default class MenuScene extends Phaser.Scene {
     this.currentScore = data.currentScore;
     this.previousScene = data.prev;
 
-    this.bestScore = Number(JSON.parse(localStorage.getItem('bestScore')), 10);
+    this.bestScore = Number(localStorage.getItem('bestScore'));
 
     if (!this.bestScore || this.bestScore < this.currentScore) {
       this.bestScore = this.currentScore;
-      localStorage.setItem('bestScore', JSON.stringify(this.currentScore));
+      localStorage.setItem('bestScore', this.currentScore);
     }
   }
 

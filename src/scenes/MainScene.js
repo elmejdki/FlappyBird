@@ -65,6 +65,15 @@ export default class MenuScene extends Phaser.Scene {
 
     // Fly if the user clicks on the screen.
     this.input.on('pointerdown', this.fly, this);
+
+    this.anims.create({
+      key: 'fly',
+      frameRate: 3,
+      repeat: 0,
+      frames: this.anims.generateFrameNumbers('bird', {
+        frames: [0, 1, 2],
+      }),
+    });
   }
 
   update() {
@@ -103,6 +112,8 @@ export default class MenuScene extends Phaser.Scene {
       repeat: 0,
       yoyo: false,
     });
+
+    this.bird.play('fly');
   }
 
   addTopTube(x, y) {

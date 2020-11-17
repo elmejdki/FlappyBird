@@ -17,7 +17,7 @@ export default class MenuScene extends Phaser.Scene {
     const leaderboardButton = this.add.image((this.game.renderer.width / 4) * 3, 350, 'leaderboard_button').setScale(2).setOrigin(0.5);
 
     this.anims.create({
-      key: 'fly',
+      key: 'logo_fly',
       frameRate: 3,
       repeat: -1,
       frames: this.anims.generateFrameNumbers('logobird', {
@@ -25,7 +25,7 @@ export default class MenuScene extends Phaser.Scene {
       }),
     });
 
-    animatedLogo.play('fly');
+    animatedLogo.play('logo_fly');
 
     playButton.setInteractive();
     leaderboardButton.setInteractive();
@@ -54,5 +54,49 @@ export default class MenuScene extends Phaser.Scene {
       // TODO: work on the this later to show the records of all the users
       // console.log('OPEN The Board');
     });
+
+    const username = localStorage.getItem('username');
+    let modal;
+
+    if (!username) {
+      modal = document.createElement('div');
+      modal.id = 'username-modal';
+
+      const form = document.createElement('form');
+      const heading = document.createElement('h3');
+      const usernameInput = document.createElement('input');
+      const button = document.createElement('button');
+      const span = document.createElement('span');
+
+      heading.textContent = 'Enter your username to start the game:';
+
+      usernameInput.id = 'username-input';
+      usernameInput.type = 'text';
+      usernameInput.placeholder = 'Less than 15 characters';
+
+      button.appendChild(span);
+      form.appendChild(heading);
+      form.appendChild(usernameInput);
+      form.appendChild(button);
+
+      modal.appendChild(form);
+      document.body.appendChild(modal);
+
+      playButton.setVisible(false);
+      leaderboardButton.setVisible(false);
+
+      modal.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = usernameInput.value;
+
+        if (username.trim().length > 0) {
+          modal.remove();
+          localStorage.setItem('username', username);
+
+          playButton.setVisible(true);
+          leaderboardButton.setVisible(true);
+        }
+      });
+    }
   }
 }
