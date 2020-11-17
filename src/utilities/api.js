@@ -1,7 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-// real game id: gO64LtUPnA6GnKbngdU2
-// fake game id: 2uxnCb3QMbmkeb6NKsmo
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2uxnCb3QMbmkeb6NKsmo/scores';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/gO64LtUPnA6GnKbngdU2/scores';
 
 // Submit data to the Api
 export const postScore = async (username, score) => {

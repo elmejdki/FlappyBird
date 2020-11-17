@@ -1,20 +1,24 @@
 import Phaser from 'phaser';
+import { postScore } from '../utilities/api';
 
 export default class MenuScene extends Phaser.Scene {
   constructor() {
     super({ key: 'GameOverScene' });
   }
 
-  init(data) {
+  async init(data) {
     this.currentScore = data.currentScore;
     this.previousScene = data.prev;
 
     this.bestScore = Number(localStorage.getItem('bestScore'));
+    const username = localStorage.getItem('username');
 
     if (!this.bestScore || this.bestScore < this.currentScore) {
       this.bestScore = this.currentScore;
       localStorage.setItem('bestScore', this.currentScore);
     }
+
+    await postScore(username, this.currentScore);
   }
 
   create() {
@@ -72,10 +76,12 @@ export default class MenuScene extends Phaser.Scene {
     });
 
     playButton.on('pointerup', () => {
+      this.previousScene.stop();
       this.scene.start('MainScene');
     });
 
     leaderboardButton.on('pointerup', () => {
+      this.previousScene.stop();
       this.scene.start('LeaderBoardScene');
     });
   }

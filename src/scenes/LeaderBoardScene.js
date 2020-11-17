@@ -24,7 +24,7 @@ export default class MenuScene extends Phaser.Scene {
     getScores().then((scores) => {
       loadingText.setVisible(false);
 
-      scores.sort((a, b) => b - a);
+      scores.sort((a, b) => b.score - a.score);
 
       for (let i = 0; i < scores.length && i < 10; i += 1) {
         this.add.text(80, 150 + i * 30, `${i + 1}.`, {
@@ -83,6 +83,5 @@ export default class MenuScene extends Phaser.Scene {
     homeButton.on('pointerup', () => {
       this.scene.start('MenuScene');
     });
-
   }
 }

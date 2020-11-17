@@ -156,6 +156,6 @@ export default class MenuScene extends Phaser.Scene {
 
   gameOver() {
     this.scene.pause();
-    this.scene.launch('GameOverScene', { currentScore: this.score });
+    this.scene.launch('GameOverScene', { prev: this.scene, currentScore: this.score });
   }
 }
