@@ -51,8 +51,7 @@ export default class MenuScene extends Phaser.Scene {
     });
 
     leaderboardButton.on('pointerup', () => {
-      // TODO: work on the this later to show the records of all the users
-      // console.log('OPEN The Board');
+      this.scene.start('LeaderBoardScene');
     });
 
     const username = localStorage.getItem('username');
