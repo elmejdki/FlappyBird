@@ -10,6 +10,7 @@ import bronzeMedal from '../assets/bronzeMedal.png';
 import gameOver from '../assets/gameOver.png';
 import gameOverBoard from '../assets/gameOverBoard.png';
 import goldMedal from '../assets/goldMedal.png';
+import home from '../assets/home.png';
 import hitSound from '../assets/hit_sound.mp3';
 import dieSound from '../assets/die_sound.mp3';
 import pointSound from '../assets/point_sound.mp3';
@@ -48,6 +49,8 @@ export default class LoadScene extends Phaser.Scene {
     this.load.image('leaderboard_button', leaderBoardButton);
 
     this.load.image('bottom_tube', bottomTube);
+
+    this.load.image('home', home);
 
     this.load.image('top_tube', topTube);
 
@@ -119,6 +122,6 @@ export default class LoadScene extends Phaser.Scene {
   create() {
     // TODO: change the scene to MenuScene after
     // finishing working on tha MainScene
-    this.scene.start('MenuScene');
+    this.scene.start('LeaderBoardScene');
   }
 }
