@@ -16,6 +16,8 @@ export default class MenuScene extends Phaser.Scene {
 
     this.point_sound = this.sound.add('point_sound');
 
+    this.hit_sound = this.sound.add('hit_sound');
+
     this.bird = this.physics.add.sprite(50, 100, 'bird').setScale(2);
 
     this.bird.setGravityY(1000);
@@ -60,11 +62,15 @@ export default class MenuScene extends Phaser.Scene {
     this.labelScore.setDepth(2);
 
     this.physics.add.overlap(this.bird, this.tubes, this.hitTube, null, this);
+
+    // Fly if the user clicks on the screen.
+    this.input.on('pointerdown', this.fly, this);
   }
 
   update() {
     if (this.bird.y < 0 || this.bird.y > 512) {
       this.gameOver();
+      this.sound.add('die_sound').play();
     }
 
     if (this.bird.angle < 30) {
@@ -79,23 +85,20 @@ export default class MenuScene extends Phaser.Scene {
 
     this.bird.alive = false;
 
+    this.hit_sound.play();
+
     this.gameOver();
   }
 
   fly() {
-    // TODO: remove this line it's useless
-    // if (this.bird.alive === false) {
-    //   return;
-    // }
-
     this.wing_sound.play();
 
     this.bird.setVelocityY(-300);
 
     this.tweens.add({
       targets: this.bird,
-      angle: -30, // '+=100'
-      ease: 'Linear', // 'Cubic', 'Elastic', 'Bounce', 'Back'
+      angle: -30,
+      ease: 'Linear',
       duration: 100,
       repeat: 0,
       yoyo: false,
@@ -143,15 +146,5 @@ export default class MenuScene extends Phaser.Scene {
   gameOver() {
     this.scene.pause();
     this.scene.launch('GameOverScene', { currentScore: this.score });
-
-    // # In scene A
-    // this.scene.launch('sceneB')
-    // this.scene.pause();
-
-    // # Then in sceneB, you can return to sceneA:
-    // button.on('pointerdown', function() {
-    //     this.scene.resume('sceneA');
-    //     this.scene.stop();
-    // })
   }
 }

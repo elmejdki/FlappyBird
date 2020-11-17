@@ -115,6 +115,6 @@ export default class LoadScene extends Phaser.Scene {
   create() {
     // TODO: change the scene to MenuScene after
     // finishing working on tha MainScene
-    this.scene.start('MainScene');
+    this.scene.start('MenuScene');
   }
 }
