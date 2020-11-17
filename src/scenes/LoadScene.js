@@ -21,10 +21,6 @@ export default class LoadScene extends Phaser.Scene {
     super({ key: 'LoadScene' });
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  init() {
-  }
-
   preload() {
     this.load.image('background', background);
 

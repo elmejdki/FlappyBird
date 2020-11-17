@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/gO64LtUPnA6GnKbngdU2/scores';
 
 // Submit data to the Api
