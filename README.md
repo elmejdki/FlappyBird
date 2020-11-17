@@ -2,7 +2,7 @@
 
 > This project meant to be a platform game, based on the requirements giving to me, and it supposed to be delivered on 5 days as max, there are a lot of platform games out there starting from the famous game of the nighties Super Mario, I decided to build the FlappyBird game because to be honest I was always fascinated by it and in the same time I was frustrated how it was hard so the first thought that come to my mind when I heard building a game I thought of build a new and easier version of the FlappyBird.
 
-![game](/home/zack/Desktop/Microverse Projects/JavaScript Projects/FlappyBird/game_play.gif)
+![game](./game_play.gif)
 
 You can find the requirements of this capstone on this [link](https://www.notion.so/Platform-game-4a55a7d1fcc245bcb012c76814764712).
 
