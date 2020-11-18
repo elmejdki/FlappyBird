@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+
+canvas {
+  box-shadow: 0 0 30px 10px black;
+}
+
+#username-modal {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  position: relative;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  border-radius: 50%;
+  outline: none;
+  background-color: #5ee270;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  cursor: pointer;
+}
+
+form button:hover {
+  transform: scale(1.1);
+}
+
+form button span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(./assets/send-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(45deg);
+}
+
+form h3 {
+  padding-bottom: 10px;
+}
+
+form input {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  outline: none;
+}
