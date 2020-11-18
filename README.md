@@ -66,6 +66,14 @@ For deployment, I used GitHub pages, but as you see my project is full of files 
 
 Now you that have finished, check the link to GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
 
+# NPM available scripts:
+
+Use "npm run-script " followed by any of the following commands :
+
+- "build": "webpack --mode production"
+- "watch": "webpack --mode development --watch"
+- "test": "jest"
+
 # Future Work
 
 - Add Night Mode to the game,
