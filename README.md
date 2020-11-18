@@ -66,6 +66,18 @@ For deployment, I used GitHub pages, but as you see my project is full of files 
 
 Now you that have finished, check the link to GitHub pages you will find your project deployed there. you can find the link on the repository settings page.
 
+### Running tests
+
+I have added some tests for the API that I used, you can run them by running the following command on the terminal:
+
+```terminal
+npm run test
+```
+
+Feel free to add new tests by your self by adding your tests in the `/test` directory.
+
+_I wished if I was working on a big project so I can write more tests and I use TDD_
+
 # NPM available scripts:
 
 Use "npm run-script " followed by any of the following commands :
@@ -80,7 +92,7 @@ Use "npm run-script " followed by any of the following commands :
 - Increase difficulty by time or score,
 - Improve the mobile version,
 - Add more type of birds to play with,
-- Add Music that plays on the background;
+- Add Music that plays in the background;
 
 # Authors
 
