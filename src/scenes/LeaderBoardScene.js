@@ -24,7 +24,9 @@ export default class MenuScene extends Phaser.Scene {
     getScores().then((scores) => {
       loadingText.setVisible(false);
 
-      scores.sort((a, b) => b.score - a.score);
+      scores = scores.filter(
+        record => (record.score <= 201 && record.user.length <= 15),
+      ).sort((a, b) => b.score - a.score);
 
       for (let i = 0; i < scores.length && i < 10; i += 1) {
         this.add.text(80, 150 + i * 30, `${i + 1}.`, {
